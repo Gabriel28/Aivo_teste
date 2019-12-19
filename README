@@ -1,0 +1,4 @@
+Executar em localhost/aivo_teste/?keyword="Palavra chave"
+
+Irá retornar o que foi solicitado como requerido no corpo do Json. 
+
