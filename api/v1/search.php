@@ -20,17 +20,17 @@ $DEVELOPER_KEY = "AIzaSyDR5jWbNxESBZNHmvJfrHl5WUN0ympNh0g";
         echo json_encode($result);
 }
     else if(isset($_GET['keyword'])==NULL)
-    {   
+    {
+        // tell the user no products found
         header("Content-type:application-json");
         http_response_code(404);
-        // tell the user no products found
         echo json_encode(array("type" => "error","message" => "Please enter the keyword."));
     }
     else
     {
+        //Error Bad Request
         header("Content-type:application-json");
         http_response_code(502);
-        // tell the user no products found
-        echo json_encode(array("type" => "error","message" => "Bad."));
+        echo json_encode(array("type" => "error","message" => "Bad Request."));
     }
 ?>
