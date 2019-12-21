@@ -1,4 +1,5 @@
-Executar em localhost/aivo_teste/?keyword="Palavra chave"
+ENDPOINT DE BUSCA YOUTUBE API.
 
-Irá retornar o que foi solicitado como requerido no corpo do Json. 
+Executar em localhost/Aivo_teste/api/v1/search.php?keyword="Palavra chave";
 
+Irá retornar o que foi solicitado como requerido já em formato JSON
