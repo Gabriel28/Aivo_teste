@@ -1,11 +1,13 @@
 <?php
 
 define("MAX_RESULTS", 10);
+//API google Client 
+$DEVELOPER_KEY = "AIzaSyDR5jWbNxESBZNHmvJfrHl5WUN0ympNh0g";
 
     if (isset($_GET['keyword']) )
     {
         $keyword = $_GET['keyword'];
-        $apikey = 'AIzaSyDR5jWbNxESBZNHmvJfrHl5WUN0ympNh0g'; 
+        $apikey = $DEVELOPER_KEY; 
         $googleApiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' . $keyword . '&maxResults=' . MAX_RESULTS . '&key=' . $apikey;
         $videos = json_decode(file_get_contents($googleApiUrl));
         $result = Array();
@@ -31,5 +33,4 @@ define("MAX_RESULTS", 10);
         // tell the user no products found
         echo json_encode(array("type" => "error","message" => "Bad."));
     }
-
 ?>
